@@ -17,7 +17,7 @@ class Specialty extends Component {
             .then(response => {
                 const data = Object.values(response.data.data); 
                 this.setState({ data });
-                
+                this.forceUpdate();
             })
             .catch(error => {
                 console.log(error);
@@ -25,10 +25,7 @@ class Specialty extends Component {
     }
     render() {
         const { data } = this.state;
-        {data.map((item, index) => (
-            console.log(item.name)
-        ))}
-        // console.log(data);
+        console.log(data);
         return (
             <div className="section-share section-specialty">
                 <div className="section-container">

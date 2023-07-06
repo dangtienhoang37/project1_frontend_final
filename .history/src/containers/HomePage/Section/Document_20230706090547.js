@@ -39,14 +39,6 @@ class Document extends Component {
                                 <div className="bg-image section-document" />
                                 <div>Triệu chứng của bệnh về tim mạch 6</div>
                             </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-document" />
-                                <div>Triệu chứng của bệnh về tim mạch 7</div>
-                            </div>
-                            <div className="section-customize">
-                                <div className="bg-image section-document" />
-                                <div>Triệu chứng của bệnh về tim mạch 8</div>
-                            </div>
                         </Slider>
                     </div>
                 </div>

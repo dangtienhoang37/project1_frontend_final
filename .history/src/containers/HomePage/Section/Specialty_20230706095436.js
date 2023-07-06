@@ -25,10 +25,8 @@ class Specialty extends Component {
     }
     render() {
         const { data } = this.state;
-        {data.map((item, index) => (
-            console.log(item.name)
-        ))}
-        // console.log(data);
+        const rowData = Object.values(data);
+        console.log(data);
         return (
             <div className="section-share section-specialty">
                 <div className="section-container">
@@ -37,10 +35,10 @@ class Specialty extends Component {
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
-                            {data.map((item, index) => (
-                                    <div className="section-customize" key={index}>
+                            {rowData.map((item, index) => (
+                                    <div className="section-customize" >
                                         <div className="bg-image section-specialty" />
-                                        <div>{item.name}</div>
+                                        <div key={index}> {item.name}</div>
                                     </div>
                                 ))}
                             {/* <div className="section-customize">

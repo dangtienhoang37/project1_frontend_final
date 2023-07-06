@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Slider from "react-slick"
-import axios from 'axios';
 
 class Specialty extends Component {
     constructor(props) {
@@ -11,24 +10,8 @@ class Specialty extends Component {
             data: []
         };
     }
-
-    componentDidMount() {
-        axios.get('https://project1backend-da705e13e21b.herokuapp.com/list/specialists')
-            .then(response => {
-                const data = Object.values(response.data.data); 
-                this.setState({ data });
-                
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }
     render() {
-        const { data } = this.state;
-        {data.map((item, index) => (
-            console.log(item.name)
-        ))}
-        // console.log(data);
+
         return (
             <div className="section-share section-specialty">
                 <div className="section-container">
@@ -37,13 +20,7 @@ class Specialty extends Component {
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>
-                            {data.map((item, index) => (
-                                    <div className="section-customize" key={index}>
-                                        <div className="bg-image section-specialty" />
-                                        <div>{item.name}</div>
-                                    </div>
-                                ))}
-                            {/* <div className="section-customize">
+                            <div className="section-customize">
                                 <div className="bg-image section-specialty" />
                                 <div>Cơ xưong khớp 1</div>
                             </div>
@@ -66,14 +43,12 @@ class Specialty extends Component {
                             <div className="section-customize">
                                 <div className="bg-image section-specialty" />
                                 <div>Cơ xưong khớp 6</div>
-                            </div> */}
+                            </div>
                         </Slider>
                     </div>
                 </div>
             </div>
         );
-        
-
     }
 
 } 

@@ -41,11 +41,11 @@ class Document extends Component {
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-document" />
-                                <div>Triệu chứng của bệnh về tim mạch 7</div>
+                                <div>Triệu chứng của bệnh về tim mạch 1</div>
                             </div>
                             <div className="section-customize">
                                 <div className="bg-image section-document" />
-                                <div>Triệu chứng của bệnh về tim mạch 8</div>
+                                <div>Triệu chứng của bệnh về tim mạch 1</div>
                             </div>
                         </Slider>
                     </div>
