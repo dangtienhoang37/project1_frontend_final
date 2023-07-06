@@ -15,9 +15,8 @@ class Specialty extends Component {
     componentDidMount() {
         axios.get('https://project1backend-da705e13e21b.herokuapp.com/list/specialists')
             .then(response => {
-                const data = Object.values(response.data.data); 
+                const data = Object.values(response.data.data); // Trích xuất các giá trị từ object thành một mảng
                 this.setState({ data });
-                
             })
             .catch(error => {
                 console.log(error);
@@ -25,10 +24,6 @@ class Specialty extends Component {
     }
     render() {
         const { data } = this.state;
-        {data.map((item, index) => (
-            console.log(item.name)
-        ))}
-        // console.log(data);
         return (
             <div className="section-share section-specialty">
                 <div className="section-container">
@@ -38,7 +33,7 @@ class Specialty extends Component {
                     <div className="section-body">
                         <Slider {...this.props.settings}>
                             {data.map((item, index) => (
-                                    <div className="section-customize" key={index}>
+                                    <div className="section-customize" >
                                         <div className="bg-image section-specialty" />
                                         <div>{item.name}</div>
                                     </div>
@@ -72,8 +67,6 @@ class Specialty extends Component {
                 </div>
             </div>
         );
-        
-
     }
 
 } 

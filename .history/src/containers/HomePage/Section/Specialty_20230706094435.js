@@ -25,10 +25,7 @@ class Specialty extends Component {
     }
     render() {
         const { data } = this.state;
-        {data.map((item, index) => (
-            console.log(item.name)
-        ))}
-        // console.log(data);
+        console.log(data);
         return (
             <div className="section-share section-specialty">
                 <div className="section-container">
