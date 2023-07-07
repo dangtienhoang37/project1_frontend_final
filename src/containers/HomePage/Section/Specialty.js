@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import Slider from "react-slick"
 import axios from 'axios';
+import { listSpecialist } from '../../../api/listSpecialist';
 
 class Specialty extends Component {
     constructor(props) {
@@ -13,9 +14,9 @@ class Specialty extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://project1backend-da705e13e21b.herokuapp.com/list/specialists')
-            .then(response => {
-                const data = Object.values(response.data.data); 
+        // axios.get('https://project1backend-da705e13e21b.herokuapp.com/list/specialists')
+        listSpecialist()
+            .then(data => {
                 this.setState({ data });
                 
             })
